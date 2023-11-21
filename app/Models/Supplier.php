@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Supplier extends Model
 {
     use HasFactory;
-    protected $fillable=['name','image','discription'];
-    protected function transaction(){
+    protected $fillable=['name','slug','image','description'];
+    public function transaction(){
         return $this->hasMany(ProductAddTransaction::class);
     }
-    protected function product(){
+    public function product(){
         return $this->hasMany(Product::class);
     }
 }

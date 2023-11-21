@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('supplier_id');
             $table->unsignedBigInteger('product_id');
             $table->integer('total_quantity');
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

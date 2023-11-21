@@ -19,10 +19,13 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('name');
             $table->string('image');
+            $table->integer('total_quantity');
             $table->integer('discount_price');
+            $table->integer('buy_price');
             $table->integer('sale_price');
-            $table->integer('view_count');
-            $table->integer('like_count');
+            $table->integer('view_count')->default(0);
+            $table->integer('like_count')->default(0);
+            $table->longText('description');
             $table->timestamps();
         });
     }

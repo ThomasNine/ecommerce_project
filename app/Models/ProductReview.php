@@ -9,10 +9,10 @@ class ProductReview extends Model
 {
     use HasFactory;
     protected $fillable=['user_id','product_id','review','rating'];
-    protected function supplier(){
+    public function supplier(){
         return $this->belongsTo(Supplier::class);
     }
-    protected function product(){
+    public function product(){
         return $this->belongsTo(Product::class);
     }
 }
